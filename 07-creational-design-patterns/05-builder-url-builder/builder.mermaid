@@ -1,0 +1,26 @@
+classDiagram
+    class UrlBuilder {
+        +setProtocol(protocol)
+        +setAuthentication(username, password)
+        +setHostname(hostname)
+        +setPort(port)
+        +setPathname(pathname)
+        +setSearch(search)
+        +setHash(hash)
+        +build() Url
+    }
+
+    class Url {
+        +protocol
+        +username
+        +password
+        +hostname
+        +port
+        +pathname
+        +search
+        +hash
+        +validate()
+        +toString() String
+    }
+
+    UrlBuilder --> Url : builds
